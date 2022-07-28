@@ -5,18 +5,18 @@
 </head>
 <body>
     <h2>DOMESTIC ARBITRATION</h2>
-    Insert Amount in Dispute (in Rupees) ₹ : <input type="number" id="cBalance" value="">
+    Insert Amount in Dispute (in Rupees)  : <input type="number" id="cBalance" value="">
         <button type="submit" onclick="domestic_arbitaion();" id="domestic">Calculate</button>
         <!--<button type="submit" onclick="domestic_arbitaion();"></button>-->
         <div id="result_domestic">
         </div>
         <h2>INTERNATIONAL ARBITRATION</h2>
-        Insert Amount in Dispute (in Rupees) ₹ : <input type="number" id="iBalance" value="">
+        Insert Amount in Dispute (in Rupees)  : <input type="number" id="iBalance" value="">
         <button type="submit" onclick="international_arbitaion();" id="international">Calculate</button>
                 <div id="result_international">
                 </div>
                 <h2>DOMESTIC COMMERCIAL MEDIATION</h2>
-                Insert Amount in Dispute (in Rupees) ₹ : <input type="number" id="comerciel_Balance" name="commerciel" value="">
+                Insert Amount in Dispute (in Rupees)  : <input type="number" id="comerciel_Balance" name="commerciel" value="">
         <button type="submit" onclick="comercial_arbitaion();" id="commercial">Calculate</button>
                 <div id="result_commercial">
                 </div>
@@ -166,7 +166,7 @@
                     dec = dec + amount;
                 var discount = main - dec;
                 //For Arbitory
-            var arbitor_dec = (arbitor_percentage / 100)*main; //its convert 10 into 0.10
+                var arbitor_dec = (arbitor_percentage / 100)*main; //its convert 10 into 0.10
                 var arbitor_decs = arbitor_dec + arbitor_amount;
                 var arbitor_discount = main - arbitor_decs;
         var html = "<span>Registration Fee: <b>"+dec+"</b></span><br>"+ 
@@ -183,7 +183,7 @@ $( "#commercial" ).on( "click", comercial_arbitaion );
                     alert('Please Fill the field');
                 }
                 else{
-                    var per = 0;
+                var per = 0;
                 var amount = 0; 
                 switch(true) {
                     case (main < 75000):
