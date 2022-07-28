@@ -32,7 +32,8 @@
             var per = 0;
             var amount = 0; 
             var arbitor_percentage = 0;
-            var arbitor_amount = 0; 
+            // var arbitor_amount = 0; 
+             var fix_amount = 75000;
             switch(true) {
                 case (main < 75000):
                     alert('Please enter valid amount');
@@ -64,20 +65,24 @@
                     per = 0.45;
                     amount = 5,47,500;
                     break;
+                    case (main <= 100000000)
                 default:
                     alert('Please Enter correct amount');
                 }
 //For Admistrative
             var dec = (per / 100)*main; //its convert 10 into 0.10
-                dec = dec + amount;
+            var dec = dec + amount;
             var discount = main - dec;
 //For Arbitory
-            var arbitor_dec = (arbitor_percentage / 100)*main; //its convert 10 into 0.10
+/*
+                var arbitor_dec = (arbitor_percentage / 100)*main; //its convert 10 into 0.10
                 var arbitor_decs = arbitor_dec + arbitor_amount;
                 var arbitor_discount = main - arbitor_decs;
-    var html = "<span>Registration Fee: <b>"+dec+"</b></span><br>"+ 
-                "<span> Administrative Fee: <b>"+discount+"</b></span><br>"+
-                "<span>One Arbitrator's Fees (excluding expense): <b>"+arbitor_discount+"</b></span><br>";
+*/
+
+    var html = "<span>Registration Fee: <b>"+fix_amount+"</b></span><br>"+ 
+                "<span> Administrative Fee: <b>"+discount+"</b></span><br>";
+                //"<span>One Arbitrator's Fees (excluding expense): <b>"+arbitor_discount+"</b></span><br>";
                 $('#result_domestic').html(html);
             }
         }
@@ -89,10 +94,10 @@
                     alert('Please Fill the field');
                 }
                 else{
-                    var per = 0;
+                var per = 0;
                 var amount = 0; 
-                var arbitor_percentage = 0;
-                var arbitor_amount = 0;
+                // var arbitor_percentage = 0;
+                // var arbitor_amount = 0;
                 switch(true) {
                     case (main < 75000):
                         alert('Please enter valid amount');
@@ -133,15 +138,17 @@
                     dec = dec + amount;
                 var discount = main - dec;
                 //For Arbitory
-            var arbitor_dec = (arbitor_percentage / 100)*main; //its convert 10 into 0.10
-                var arbitor_decs = arbitor_dec + arbitor_amount;
-                var arbitor_discount = main - arbitor_decs;
+                /*
+                    var arbitor_dec = (arbitor_percentage / 100)*main; //its convert 10 into 0.10
+                    var arbitor_decs = arbitor_dec + arbitor_amount;
+                    var arbitor_discount = main - arbitor_decs;
+                */
         var html = "<span>Registration Fee: <b>"+dec+"</b></span><br>"+ 
-                    "<span> Administrative Fee: <b>"+discount+"</b></span><br>"+
-                    "<span>One Arbitrator's Fees (excluding expense): <b>"+arbitor_discount+"</b></span><br>";
+                    "<span> Administrative Fee: <b>"+discount+"</b></span><br>";
+                    //"<span>One Arbitrator's Fees (excluding expense): <b>"+arbitor_discount+"</b></span><br>";
                     $('#result_international').html(html);
              }
-                }             
+                } 
 // For Domestic Commercial
 $( "#commercial" ).on( "click", comercial_arbitaion );
              function comercial_arbitaion(){
@@ -151,7 +158,7 @@ $( "#commercial" ).on( "click", comercial_arbitaion );
                 }
                 else{
                     var per = 0;
-                var amount = 0; 
+                    var amount = 0; 
                 switch(true) {
                     case (main < 75000):
                         alert('Please enter valid amount');
@@ -185,11 +192,14 @@ $( "#commercial" ).on( "click", comercial_arbitaion );
                 var dec = dec + amount;
                 var discount = main - dec;
         var html = "<span>Registration Fee: <b>"+dec+"</b></span><br>"+ 
-                    "<span> Administrative Fee: <b>"+discount+"</b></span><br>"+
-                    "<span>One Arbitrator's Fees (excluding expense): <b>"+main+"</b></span><br>";
+                    "<span> Administrative Fee: <b>"+discount+"</b></span><br>";
+                    //"<span>One Arbitrator's Fees (excluding expense): <b>"+main+"</b></span><br>";
                     $('#result_commercial').html(html);
              }
                 }
+// setInterval(function(){ 
+//     alert('kjfhsd');
+// }, 60 * 5000);
     </script>
 </body>
 </html>
